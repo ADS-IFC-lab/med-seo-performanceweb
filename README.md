@@ -6,7 +6,7 @@ Uma breve descrição do que o projeto faz e para quem é útil.
 - Tecnologia em Análise e Desenvolvimento de Sistemas
 - Desenvolvimento Web - 3a. fase
 - Professor: Rafael Leonardo Vivian
-- Estudantes: Caio Dutra, Cezar Cordeiro, Ezequiel Krenz, Fernando Maia, Samuel Krenz
+- Estudantes: Caio Dutra, Cezar Cordeiro, Ezequiel Krenz, Fernando Maia, Pedro Haupt, Samuel Krenz
 
 ## 🛠️ Tecnologias Utilizadas
 - Linguagens: HTML e CSS

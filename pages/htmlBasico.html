@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Molde</title>
+    <title>HTML Básico</title>
     <link rel="stylesheet" href="/css/style.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -15,13 +15,13 @@
         <nav id="nav">
             <button aria-label="Abrir Menu" id="btn-mobile" aria-haspopup="true" aria-controls="menu" aria-expanded="false"><span id="hamburger"></span></button>
             <ul class="ulheader" id="menu" role="menu">
-                <li><a class="aheader" href="#"><i class="bi bi-info-circle"></i> Introdução</a></li>
-                <li><a class="aheader" href="#"><i class="bi bi-code-slash"></i> HTML Básico</a></li>
-                <li><a class="aheader" href="#"><i class="bi bi-search"></i> SEO Inicial</a></li>
-                <li><a class="aheader" href="#"><i class="bi bi-file-text"></i> SEO no Conteúdo</a></li>
-                <li><a class="aheader" href="#"><i class="bi bi-speedometer"></i> Performance Básica</a></li>
-                <li><a class="aheader" href="#"><i class="bi bi-tools"></i> Otimização do Site</a></li>
-                <li><a class="aheader" href="#"><i class="bi bi-check2-square"></i> Quiz</a></li>
+                <li><a class="aheader" href="/index.html"><i class="bi bi-info-circle"></i> Introdução</a></li>
+                <li><a class="aheader" href="htmlBasico.html"><i class="bi bi-code-slash"></i> HTML Básico</a></li>
+                <li><a class="aheader" href="SEOinicial.html"><i class="bi bi-search"></i> SEO Inicial</a></li>
+                <li><a class="aheader" href="SEOConteudo.html"><i class="bi bi-file-text"></i> SEO no Conteúdo</a></li>
+                <li><a class="aheader" href="PerformanceBasica.html"><i class="bi bi-speedometer"></i> Performance Básica</a></li>
+                <li><a class="aheader" href="OtimizacaoSite.html"><i class="bi bi-tools"></i> Otimização do Site</a></li>
+                <li><a class="aheader" href="/index.html"><i class="bi bi-check2-square"></i> Quiz</a></li>
             </ul>
         </nav>
             <div id="container-header">
@@ -30,7 +30,7 @@
     </header>
     <script src="/js/script.js"></script>
     <section id="main-content">
-        <div id="carouselExampleIndicators" class="carousel slide">
+            <div id="carouselExampleIndicators" class="carousel slide">
                 <div class="carousel-indicators">
                     <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="" aria-label="Slide 1"></button>
                     <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2" class="active" aria-current="true"></button>
@@ -39,36 +39,56 @@
                 <div class="carousel-inner">
                     <div class="carousel-item">
                             <svg class="bd-placeholder-img bd-placeholder-img-lg d-block w-100" role="img" >
-                                <img src="https://data.1freewallpapers.com/download/temple-in-kyoto-at-night-1920x1080.jpg" alt="">
+                                <img src="https://placehold.co/300x200" alt="">
                             </svg>
                         </div>
                         <div class="carousel-item active">
                             <svg class="bd-placeholder-img bd-placeholder-img-lg d-block w-100" role="img" >
-                                <img src="https://imagenes.20minutos.es/uploads/imagenes/2024/05/15/una-imagen-creada-por-la-herramienta-imagen-3-de-google.jpeg" alt="">
+                                <img src="https://placehold.co/300x200" alt="">
                             </svg>
                         </div>
                         <div class="carousel-item">
                             <svg class="bd-placeholder-img bd-placeholder-img-lg d-block w-100" role="img">
-                                <img src="https://data.1freewallpapers.com/download/temple-in-kyoto-at-night-1920x1080.jpg" alt="">
+                                <img src="https://placehold.co/300x200" alt="">
                             </svg>
                         </div>
                 </div>
             </div>
-            <h1>Titulo</h1>
+            <h1>Começando com HTML e Estrutura de Página</h1>
             <article class="text-main-content">
                 <div id="text1-main-content">
-                    <p>Lorem ipsum dolor sit amet consectetur adipiscing elit quisque faucibus ex sapien vitae pellentesque sem placerat in id cursus mi pretium tellus duis convallis tempus leo eu aenean sed diam urna tempor pulvinar vivamus fringilla lacus nec metus bibendum egestas iaculis massa nisl malesuada lacinia integer nunc posuere ut hendrerit semper vel class aptent taciti sociosqu ad litora torquent 
-                        per conubia nostra inceptos himenaeos orci varius natoque penatibus et magnis dis parturient montes nascetur ridiculus mus donec rhoncus eros lobortis nulla molestie mattis scelerisque maximus eget fermentum odio phasellus non purus est efficitur laoreet mauris pharetra vestibulum fusce dictum risus.</p>
+                    <h2>O que é HTML</h2>
+                    <p>HTML é a sigla para <strong>HyperText Markup Language</strong> — em português, “Linguagem de Marcação de Hipertexto”.</p>
+                    <p>Mas o que significa?</p>
+                    <ul>
+                        <li>
+                            <strong>Linguagem de marcação</strong> quer dizer que o HTML marca os pedaços do conteúdo para indicar o que eles são: um título, um parágrafo, um link, uma imagem, etc.
+                        </li>
+                        <li>
+                            <strong>Hipertexto</strong> é o nome técnico para o que conhecemos como links — aqueles que nos levam de uma página para outra.
+                        </li>
+                    </ul>
+                    <p>
+                        Ou seja: o HTML estrutura o conteúdo de uma página da web, dizendo ao navegador <i>como ele deve exibir cada parte</i>.
+                    </p>
                     <img src="https://th.bing.com/th/id/OIP.rm4o2LZV2iOu83ECOsG-pwHaEm?w=275&h=180&c=7&r=0&o=7&pid=1.7&rm=3" alt="">
                 </div>
                 <hr><br>
-                <div id="text1-main-content">
+                <div id="text2-main-content">
                     <img src="https://th.bing.com/th/id/OIP.rm4o2LZV2iOu83ECOsG-pwHaEm?w=275&h=180&c=7&r=0&o=7&pid=1.7&rm=3" alt="">
-                    <p>Lorem ipsum dolor sit amet consectetur adipiscing elit quisque faucibus ex sapien vitae pellentesque sem placerat in id cursus mi pretium tellus duis convallis tempus leo eu aenean sed diam urna tempor pulvinar vivamus fringilla lacus nec metus bibendum egestas iaculis massa nisl malesuada lacinia integer nunc posuere ut hendrerit semper vel class aptent taciti sociosqu ad litora torquent 
-                        per conubia nostra inceptos himenaeos orci varius natoque penatibus et magnis dis parturient montes nascetur ridiculus mus donec rhoncus eros lobortis nulla molestie mattis scelerisque maximus eget fermentum odio phasellus non purus est efficitur laoreet mauris pharetra vestibulum fusce dictum risus.</p>
+                    <h2>Por que aprender HTML primeiro?</h2>
+                    <p>Porque ele é a base de toda página da web.<br>Antes de pensar em beleza (CSS) ou interatividade (JavaScript), a estrutura da página precisa existir — e é o HTML que a cria.</p>
+                    <p>Imagine um site como uma casa:</p>
+                    <ul>
+                        <li>O <strong>HTML</strong> é a estrutura (paredes, telhado, portas);</li>
+                        <li>O <strong>CSS</strong> é a decoração (cores, estilos);</li>
+                        <li>O <strong>JavaScript</strong> é a automação (abrir portas, acender luzes).</li>
+                    </ul>
+                    
                 </div>
                 <hr><br>
-                <div id="text1-main-content">
+                <div id="text3-main-content">
+                    
                     <p>Lorem ipsum dolor sit amet consectetur adipiscing elit quisque faucibus ex sapien vitae pellentesque sem placerat in id cursus mi pretium tellus duis convallis tempus leo eu aenean sed diam urna tempor pulvinar vivamus fringilla lacus nec metus bibendum egestas iaculis massa nisl malesuada lacinia integer nunc posuere ut hendrerit semper vel class aptent taciti sociosqu ad litora torquent 
                         per conubia nostra inceptos himenaeos orci varius natoque penatibus et magnis dis parturient montes nascetur ridiculus mus donec rhoncus eros lobortis nulla molestie mattis scelerisque maximus eget fermentum odio phasellus non purus est efficitur laoreet mauris pharetra vestibulum fusce dictum risus.</p>
                     <img src="https://th.bing.com/th/id/OIP.rm4o2LZV2iOu83ECOsG-pwHaEm?w=275&h=180&c=7&r=0&o=7&pid=1.7&rm=3" alt="">

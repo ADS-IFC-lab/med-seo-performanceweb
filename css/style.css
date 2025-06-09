@@ -1,6 +1,7 @@
 *{
     margin: 0;
     padding: 0;
+
 }
 
 i{
@@ -238,7 +239,6 @@ section{
 }
 
 .section.reverse {
-  display: flex;
   gap: 2rem;
   flex-wrap: wrap;
   align-items: center;

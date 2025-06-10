@@ -54,26 +54,379 @@
                         </div>
                 </div>
             </div>
-            <h1>Titulo</h1>
-            <article class="text-main-content">
-                <div id="text1-main-content">
-                    <p>Lorem ipsum dolor sit amet consectetur adipiscing elit quisque faucibus ex sapien vitae pellentesque sem placerat in id cursus mi pretium tellus duis convallis tempus leo eu aenean sed diam urna tempor pulvinar vivamus fringilla lacus nec metus bibendum egestas iaculis massa nisl malesuada lacinia integer nunc posuere ut hendrerit semper vel class aptent taciti sociosqu ad litora torquent 
-                        per conubia nostra inceptos himenaeos orci varius natoque penatibus et magnis dis parturient montes nascetur ridiculus mus donec rhoncus eros lobortis nulla molestie mattis scelerisque maximus eget fermentum odio phasellus non purus est efficitur laoreet mauris pharetra vestibulum fusce dictum risus.</p>
-                    <img src="https://th.bing.com/th/id/OIP.rm4o2LZV2iOu83ECOsG-pwHaEm?w=275&h=180&c=7&r=0&o=7&pid=1.7&rm=3" alt="">
+            <style>
+                * {
+                    margin: 0;
+                    padding: 0;
+                    box-sizing: border-box;
+                }
+        
+                body {
+                    font-family: 'Arial', sans-serif;
+                    line-height: 1.6;
+                    color: #333;
+                    background-color: #f5f5f5;
+                }
+        
+                /* Header */
+                header {
+                    background-color: #2c2c2c;
+                    color: white;
+                    padding: 1rem 0;
+                    position: fixed;
+                    width: 100%;
+                    top: 0;
+                    z-index: 1000;
+                    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+                }
+        
+                #container-header {
+                    text-align: center;
+                }
+        
+                #logo {
+                    color: white;
+                    text-decoration: none;
+                    font-size: 2rem;
+                    font-weight: bold;
+                    letter-spacing: 3px;
+                }
+        
+                nav {
+                    display: none;
+                }
+        
+                #btn-mobile {
+                    position: absolute;
+                    top: 50%;
+                    left: 1rem;
+                    transform: translateY(-50%);
+                    background: none;
+                    border: none;
+                    color: white;
+                    font-size: 1.5rem;
+                    cursor: pointer;
+                }
+        
+                /* Main Content */
+                main {
+                    margin-top: 80px;
+                    min-height: calc(100vh - 80px);
+                }
+        
+                /* Hero Section */
+                .hero-section {
+                    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+                    color: white;
+                    text-align: center;
+                    padding: 4rem 2rem;
+                }
+        
+                .hero-section h1 {
+                    font-size: 2.5rem;
+                    margin-bottom: 1rem;
+                    font-weight: 300;
+                }
+        
+                /* Highlighted Content Box */
+                .highlight-box {
+                    background-color: #4a90e2;
+                    color: white;
+                    padding: 2rem;
+                    margin: 2rem auto;
+                    max-width: 800px;
+                    border-radius: 8px;
+                    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+                }
+        
+                .highlight-box p {
+                    font-size: 1.1rem;
+                    line-height: 1.8;
+                    text-align: justify;
+                }
+        
+                /* Content Sections */
+                .content-section {
+                    max-width: 1200px;
+                    margin: 0 auto;
+                    padding: 3rem 2rem;
+                }
+        
+                .section-title {
+                    font-size: 2rem;
+                    margin-bottom: 2rem;
+                    text-align: center;
+                    color: #2c2c2c;
+                    font-weight: 300;
+                }
+        
+                .two-column {
+                    display: grid;
+                    grid-template-columns: 1fr 1fr;
+                    gap: 3rem;
+                    margin-top: 2rem;
+                }
+        
+                .column-content {
+                    background: white;
+                    padding: 2rem;
+                    border-radius: 8px;
+                    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+                }
+        
+                .column-content h3 {
+                    color: #2c2c2c;
+                    margin-bottom: 1rem;
+                    font-size: 1.3rem;
+                }
+        
+                .column-content p {
+                    text-align: justify;
+                    line-height: 1.7;
+                    color: #555;
+                }
+        
+                .image-placeholder {
+                    width: 100%;
+                    height: 200px;
+                    background-color: #999;
+                    border-radius: 8px;
+                    margin-bottom: 1rem;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    color: white;
+                    font-size: 1.1rem;
+                }
+        
+                /* Footer */
+                footer {
+                    background-color: #2c2c2c;
+                    color: white;
+                    padding: 3rem 2rem;
+                    margin-top: 4rem;
+                }
+        
+                .footer-content {
+                    max-width: 1200px;
+                    margin: 0 auto;
+                    display: grid;
+                    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+                    gap: 2rem;
+                }
+        
+                .footer-section h4 {
+                    margin-bottom: 1rem;
+                    color: #4a90e2;
+                }
+        
+                .footer-section ul {
+                    list-style: none;
+                }
+        
+                .footer-section ul li {
+                    margin-bottom: 0.5rem;
+                }
+        
+                .footer-section ul li a {
+                    color: #ccc;
+                    text-decoration: none;
+                    transition: color 0.3s;
+                }
+        
+                .footer-section ul li a:hover {
+                    color: #4a90e2;
+                }
+        
+                .footer-bottom {
+                    text-align: center;
+                    margin-top: 2rem;
+                    padding-top: 2rem;
+                    border-top: 1px solid #444;
+                    color: #999;
+                }
+        
+                /* Responsive */
+                @media (max-width: 768px) {
+                    .hero-section h1 {
+                        font-size: 2rem;
+                    }
+        
+                    .two-column {
+                        grid-template-columns: 1fr;
+                        gap: 2rem;
+                    }
+        
+                    .highlight-box {
+                        margin: 2rem 1rem;
+                        padding: 1.5rem;
+                    }
+        
+                    .content-section {
+                        padding: 2rem 1rem;
+                    }
+                }
+            </style>
+        </head>
+        <body>
+            <header id="header">
+                <nav id="nav">
+                    <button aria-label="Abrir Menu" id="btn-mobile" aria-haspopup="true" aria-controls="menu" aria-expanded="false">
+                        <i class="bi bi-list"></i>
+                    </button>
+                </nav>
+                <div id="container-header">
+                    <a id="logo" href="#">MED</a>
                 </div>
-                <hr><br>
-                <div id="text1-main-content">
-                    <img src="https://th.bing.com/th/id/OIP.rm4o2LZV2iOu83ECOsG-pwHaEm?w=275&h=180&c=7&r=0&o=7&pid=1.7&rm=3" alt="">
-                    <p>Lorem ipsum dolor sit amet consectetur adipiscing elit quisque faucibus ex sapien vitae pellentesque sem placerat in id cursus mi pretium tellus duis convallis tempus leo eu aenean sed diam urna tempor pulvinar vivamus fringilla lacus nec metus bibendum egestas iaculis massa nisl malesuada lacinia integer nunc posuere ut hendrerit semper vel class aptent taciti sociosqu ad litora torquent 
-                        per conubia nostra inceptos himenaeos orci varius natoque penatibus et magnis dis parturient montes nascetur ridiculus mus donec rhoncus eros lobortis nulla molestie mattis scelerisque maximus eget fermentum odio phasellus non purus est efficitur laoreet mauris pharetra vestibulum fusce dictum risus.</p>
+            </header>
+        
+            <main>
+                <!-- Hero Section -->
+                <section class="hero-section">
+                    <h1>Otimização de Sites</h1>
+                    <p>Técnicas essenciais para melhorar performance e SEO</p>
+                </section>
+        
+                <!-- Highlighted Content -->
+                <div class="highlight-box">
+                    <p>
+                        A otimização de sites é fundamental para garantir uma experiência de usuário excepcional e melhor posicionamento nos mecanismos de busca. 
+                        Através de técnicas específicas de SEO, compressão de imagens, minificação de código e otimização de carregamento, é possível 
+                        reduzir significativamente o tempo de carregamento das páginas. Sites otimizados não apenas oferecem melhor experiência ao usuário, 
+                        mas também conseguem melhores rankings no Google e outros buscadores. A velocidade de carregamento é um fator crucial que impacta 
+                        diretamente na taxa de conversão e no engajamento dos visitantes. Implementar essas práticas de otimização resulta em maior 
+                        visibilidade online e melhor performance geral do website.
+                    </p>
                 </div>
-                <hr><br>
-                <div id="text1-main-content">
-                    <p>Lorem ipsum dolor sit amet consectetur adipiscing elit quisque faucibus ex sapien vitae pellentesque sem placerat in id cursus mi pretium tellus duis convallis tempus leo eu aenean sed diam urna tempor pulvinar vivamus fringilla lacus nec metus bibendum egestas iaculis massa nisl malesuada lacinia integer nunc posuere ut hendrerit semper vel class aptent taciti sociosqu ad litora torquent 
-                        per conubia nostra inceptos himenaeos orci varius natoque penatibus et magnis dis parturient montes nascetur ridiculus mus donec rhoncus eros lobortis nulla molestie mattis scelerisque maximus eget fermentum odio phasellus non purus est efficitur laoreet mauris pharetra vestibulum fusce dictum risus.</p>
-                    <img src="https://th.bing.com/th/id/OIP.rm4o2LZV2iOu83ECOsG-pwHaEm?w=275&h=180&c=7&r=0&o=7&pid=1.7&rm=3" alt="">
+        
+                <!-- Content Sections -->
+                <section class="content-section">
+                    <h2 class="section-title">Técnicas de Performance</h2>
+                    
+                    <div class="two-column">
+                        <div class="column-content">
+                            <h3>Otimização de Imagens</h3>
+                            <p>
+                                A compressão e otimização de imagens é uma das técnicas mais eficazes para reduzir o tempo de carregamento. 
+                                Utilize formatos modernos como WebP, implemente lazy loading para imagens abaixo da dobra, e sempre 
+                                defina dimensões apropriadas. Ferramentas como TinyPNG ou ImageOptim podem reduzir o tamanho dos arquivos 
+                                sem perda significativa de qualidade. Considere também o uso de CDNs para distribuição mais rápida do conteúdo.
+                            </p>
+                        </div>
+                        
+                        <div class="column-content">
+                            <h3>Minificação de Código</h3>
+                            <div class="image-placeholder">Gráfico de Performance</div>
+                            <p>
+                                A minificação remove espaços em branco, comentários e caracteres desnecessários do código CSS, JavaScript e HTML. 
+                                Esta técnica pode reduzir o tamanho dos arquivos em até 30%. Utilize ferramentas automatizadas como UglifyJS 
+                                para JavaScript, CSSNano para CSS, e HTMLMinifier para HTML. Combine arquivos CSS e JS quando possível para 
+                                reduzir o número de requisições HTTP.
+                            </p>
+                        </div>
+                    </div>
+                </section>
+        
+                <section class="content-section">
+                    <h2 class="section-title">SEO e Estrutura</h2>
+                    
+                    <div class="two-column">
+                        <div class="column-content">
+                            <h3>Meta Tags Otimizadas</h3>
+                            <p>
+                                Meta tags bem estruturadas são essenciais para o SEO. O title tag deve ter entre 50-60 caracteres e incluir 
+                                palavras-chave relevantes. A meta description deve ser atrativa e ter até 160 caracteres, funcionando como 
+                                um "anúncio" para seu conteúdo. Não esqueça das meta tags Open Graph para redes sociais e Schema.org para 
+                                dados estruturados que ajudam os buscadores a entender melhor seu conteúdo.
+                            </p>
+                        </div>
+                        
+                        <div class="column-content">
+                            <h3>Estrutura HTML Semântica</h3>
+                            <p>
+                                Use tags HTML5 semânticas como header, nav, main, article, section e footer para criar uma estrutura clara. 
+                                Hierarquia correta de headings (H1, H2, H3) ajuda tanto na acessibilidade quanto no SEO. Implemente 
+                                breadcrumbs para navegação, use atributos alt em imagens descritivos, e garanta que o site seja responsivo 
+                                e mobile-friendly, pois isso impacta diretamente no ranking do Google.
+                            </p>
+                        </div>
+                    </div>
+                </section>
+            </main>
+        
+            <footer>
+                <div class="footer-content">
+                    <div class="footer-section">
+                        <h4>Nome</h4>
+                        <ul>
+                            <li><a href="#">Início</a></li>
+                            <li><a href="#">Sobre</a></li>
+                            <li><a href="#">Serviços</a></li>
+                            <li><a href="#">Contato</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="footer-section">
+                        <h4>Fontes</h4>
+                        <ul>
+                            <li><a href="#">Google Developers</a></li>
+                            <li><a href="#">Web.dev</a></li>
+                            <li><a href="#">W3C</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="footer-section">
+                        <h4>Colaboradores</h4>
+                        <ul>
+                            <li><a href="#">Cesar Augusto</a></li>
+                            <li><a href="#">Caio Dutra</a></li>
+                            <li><a href="#">Pedro Haupt</a></li>
+                            <li><a href="#">Cauẽ</a></li>
+                            <li><a href="#">Samuel Krenz</a></li>
+                            <li><a href="#">Ezequiel Krenz</a></li>
+                            <li><a href="#">Fernando Maia</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="footer-section">
+                        <h4>IFC Fraiburgo</h4>
+                        <ul>
+                            <li>2025</li>
+                            <li>ADS 3ª Fase</li>
+                        </ul>
+                    </div>
                 </div>
-            </article>
+                
+                <div class="footer-bottom">
+                    <p>&copy; 2025 MED - Todos os direitos reservados</p>
+                </div>
+            </footer>
+        
+            <script>
+                // Menu mobile functionality
+                const btnMobile = document.getElementById('btn-mobile');
+                
+                btnMobile.addEventListener('click', function() {
+                    // Add mobile menu functionality here
+                    console.log('Menu mobile clicked');
+                });
+        
+                // Smooth scrolling for internal links
+                document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                    anchor.addEventListener('click', function (e) {
+                        e.preventDefault();
+                        const target = document.querySelector(this.getAttribute('href'));
+                        if (target) {
+                            target.scrollIntoView({
+                                behavior: 'smooth',
+                                block: 'start'
+                            });
+                        }
+                    });
+                });
+            </script>
+        </body>
+        </html>
     </section>
     <footer>
         <!-- aqui vai será o footer com tamanho (100% x 360px)-->

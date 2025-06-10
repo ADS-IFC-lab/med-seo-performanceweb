@@ -188,6 +188,7 @@ section{
     transition: 0.6s;
 }
 
+<<<<<<< HEAD
 .text-main-content{
     margin:  0 30px;
 }
@@ -278,3 +279,9 @@ hr{
     }
 
 }
+/*=============================================FOOTER=============================================*/
+
+footer {
+    background-color: gray;
+}
+

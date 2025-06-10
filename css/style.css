@@ -1,3 +1,12 @@
+:root{
+    --primary: #232323;
+    --second: #d4d4d4;
+    --third: gray;
+    --fourth: #696969;
+    --fifth: #f0f0f0;
+}
+
+
 *{
     margin: 0;
     padding: 0;
@@ -32,7 +41,7 @@ header{
     padding: 0.2rem 1rem ;
     display: flex;
     align-items: center;
-    background: #181818; 
+    background: var(--primary); 
     width: 100vw;
 }
 
@@ -42,15 +51,13 @@ header{
 }
 
 .aheader {
-    color: #f7f7f7;
+    color: var(--second);
     text-decoration: none;
-    font-family:'Livvic', sans-serif;
 }
 
 #container-header {
     font-size: 2em;
-    font-family: 'nordic', sans-serif;
-    color: #f7f7f7;
+    color: var(--second);
     display: flex;
     align-items: center;
     width: 100%;
@@ -60,7 +67,7 @@ header{
     width: 100%;
     text-align: center;
     text-decoration: none;
-    color: #f7f7f7;
+    color: var(--second);
 }
 
 @media (max-width:820px) {
@@ -82,7 +89,7 @@ header{
 
 #btn-mobile {
     display: none;
-    color: #fff;
+    color: var(--second);
 }
 
 /*Lista*/
@@ -94,7 +101,7 @@ header{
     top: 50px;
     left: -350px;
     font-size: 1.7em;
-    background: #181818;
+    background: var(--primary);
     transition: 0.6s;
     z-index: 1000;
     height: 100vh;
@@ -118,7 +125,7 @@ header{
     margin-left: 10px;
     margin-right: 10px;
     font-size: 0.8em;
-    color: #fff;
+    color: var(--second);
 }
 
 #btn-mobile {
@@ -188,10 +195,10 @@ section{
     transition: 0.6s;
 }
 
-<<<<<<< HEAD
 .text-main-content{
     margin:  0 30px;
 }
+
 .text-main-content h1{
     margin:  30px 0 30px 0;
 }
@@ -205,6 +212,10 @@ section{
     justify-content: space-around;
 }
 
+.container-text>div>p{
+    text-align: justify;
+}
+
 .container-text #text1-main-content{
     width: 60vw;
 }
@@ -216,10 +227,10 @@ section{
 }
 
 p code{
-    background: #dddddd;
+    background: var(--second);
     padding: 3px;
     border-radius: 6px;
-    color: #181818;
+    color: var(--primary);
 }
 
 .text-main-content h3{
@@ -227,7 +238,7 @@ p code{
 }
 
 code{
-    color: #696969 !important;
+    color: var(--fourth) !important;
 }
 
 hr{
@@ -282,6 +293,175 @@ hr{
 /*=============================================FOOTER=============================================*/
 
 footer {
-    background-color: gray;
+    background-color: var(--third);
+}
+
+/*=============================================HERO=============================================*/
+
+.hero-section {
+    height: 400px;
+    margin-bottom: 60px;
+    position: relative;
+    background-image: url('https://images.unsplash.com/photo-1558655146-9f40138edfeb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2064&q=80');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0,0,0,0.4);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-text {
+    color: var(--second);
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+/*=============================================STATS=============================================*/
+
+.stats-section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-left: 60px;
+    background: var(--second);
+    color: var(--primary);
+    padding: 40px;
+    border-radius: 20px;
+    text-align: center;
+}
+
+.stat-item{
+    margin: 0 20px;
+}
+
+.stat-item h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.stat-item p {
+    font-size: 14px;
+    opacity: 0.9;
+}
+
+/*=============================================PRACTICES=============================================*/
+
+.performance-practices {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-bottom: 60px;
+}
+
+.practice-card {
+    background: var(--fifth);
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-top: 4px solid var(--primary);
+}
+
+.practice-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+
+.practice-card h3 {
+    color: var(--primary);
+    font-size: 20px;
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.practice-card p {
+    color: var(--fourth);
+    line-height: 1.6;
+    font-size: 14px;
+}
+
+.practice-icon {
+    font-size: 24px;
+    width: 40px;
+    height: 40px;
+    background: var(--primary);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--second);
+    flex-shrink: 0;
+}
+
+/*=============================================TOOLS=============================================*/
+
+.tools-section {
+    background: white;
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+    margin-bottom: 60px;
+}
+
+.tools-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    margin-top: 30px;
+}
+
+.tool-card {
+    background: var(--fifth);
+    padding: 25px;
+    border-radius: 10px;
+    border-left: 4px solid var(--primary);
+    transition: all 0.3s ease;
+}
+
+.tool-card:hover {
+    transform: translateX(5px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.tool-card h4 {
+    color: var(--primary);
+    font-size: 18px;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.tool-card p {
+    color: #666;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+.tool-icon {
+    font-size: 20px;
+    width: 30px;
+    height: 30px;
+    background: var(--primary);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    flex-shrink: 0;
 }
 

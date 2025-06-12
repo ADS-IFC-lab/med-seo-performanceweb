@@ -91,7 +91,7 @@ header {
 
 #btn-mobile {
     display: none;
-    color: var(--second);
+    color: var(--highlighted);
 }
 
 /*Lista*/

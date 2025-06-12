@@ -238,3 +238,4 @@ function reiniciarQuiz() {
 }
 
 window.onload = iniciarQuiz;
+

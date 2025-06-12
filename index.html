@@ -56,21 +56,27 @@
                     </div>
                 </div>
             </article>
+            <hr>
             <article class="carrosel-container">
                 <!-- aqui vai vim o carrosel com as 7 páginas -->
             </article>
             <hr>
             <article class="quiz-container" id="quiz">
-                <div class="text-quiz-container">
-                    <h2>Acha que já dominou o assunto?</h2>
-                    <h5>Duvido você acertar tudo</h5>
-                </div>
-                <!-- aqui vai terá um quiz -->
+                <div class="quiz-box-container">
+                    <h2 class="titulo-secao">Acha que já dominou o assunto?</h2>
+                    <p class="subtitulo-secao">Duvido você acertar tudo</p>
+                    <div id="quiz-container"></div>
+                    <div id="resultado">
+                      <p>Parabéns! Você completou o quiz.</p>
+                      <p>Pontuação Final: <span id="pontuacao-final"></span></p>
+                      <button id="submit-quiz" onclick="reiniciarQuiz()">Reiniciar Quiz</button>
+                    </div>
+                  </div>
             </article>
             
                 <!-- aqui vai será o footer com tamanho (100% x 360px)-->
 
-            <div class="container"> 
+            <div class="footer-container"> 
                 <footer class="row row-cols-1 row-cols-sm-2 row-cols-md-5 py-5 my-5 border-top">
                     <div class="col mb-3">
                         <a href="/" class="d-flex align-items-center mb-3 link-body-emphasis text-decoration-none" aria-label="Bootstrap">

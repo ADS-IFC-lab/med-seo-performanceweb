@@ -1,11 +1,11 @@
 :root {
     --primary: #232323;
-    --second: #d4d4d4;
+    --second: #CCD0D9;
     --third: gray;
-    --fourth: #696969;
-    --fifth: #f0f0f0;
-    --highlighted: red;
-    --highlighted-dark: rgb(175, 0, 0);
+    --fourth: #666973;
+    --fifth: #F2F2F2;
+    --highlighted: #526c41;
+    --highlighted-dark: #334229;
 }
 
 .carousel-wrapper-catalog {

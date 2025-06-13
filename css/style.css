@@ -1,11 +1,11 @@
 :root {
     --primary: #232323;
-    --second: #d4d4d4;
+    --second: #CCD0D9;
     --third: gray;
-    --fourth: #696969;
-    --fifth: #f0f0f0;
-    --highlighted: red;
-    --highlighted-dark: rgb(175, 0, 0);
+    --fourth: #666973;
+    --fifth: #F2F2F2;
+    --highlighted: #526c41;
+    --highlighted-dark: #334229;
 }
 
 
@@ -17,7 +17,6 @@
 
 i {
     font-size: large;
-    color: #c05151;
 }
 
 /*=============================================BANNER=============================================*/
@@ -216,6 +215,7 @@ section {
 
 .container-text>div>p {
     text-align: justify;
+    margin-left: 10px;
 }
 
 .container-text #text1-main-content {
@@ -266,6 +266,14 @@ hr {
     #hamburger {
         margin-left: 40px;
     }
+
+    .catalog-container {
+        scale: 1;
+    }
+
+    .carousel-wrapper-catalog{
+        width: 80vw;
+    }
 }
 
 @media (max-width: 700px) {
@@ -292,6 +300,9 @@ hr {
         justify-self: center;
     }
 
+    .carousel-wrapper-catalog{
+        width: 80vw;
+    }
 }
 
 /*=============================================FOOTER=============================================*/
@@ -305,7 +316,7 @@ footer {
     position: absolute;
     display: flex;
     justify-content: space-around;
-    background-color: var(--third);
+    background-color: var(--second);
     height: auto;
     width: 100%;
     left: 0;
@@ -491,6 +502,12 @@ footer {
     flex-shrink: 0;
 }
 
+/*=============================================CAROUSEL=============================================*/
+
+.carousel-indicators>button{
+    height: 10px !important;
+    border-radius: 20% !important;
+}
 
 /*=============================================COLUMN=============================================*/
 

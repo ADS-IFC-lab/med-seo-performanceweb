@@ -2,14 +2,16 @@
 
 :root {
     --primary:          #232323;
-    --second:           #d8d8d8;
-    --third:            gray;
-    --fourth:           #6f6f6f;
-    --fifth:            #d3d3d3;
+    --second:           #313131;
+    --third:            rgb(52, 52, 52);
+    --fourth:           #3f3f3f;
+    --fifth:            #161616;
     --highlighted:      #526c41;
     --highlighted-dark: #334229;
-    --bg:               #bbbbbb;
-    --text:             #232323;
+    --bg:               #333333;
+    --code:             #919191;
+    --card-content:     #767676 ;
+    --text:             #a8a8a8;
     --text-contrast:    #F2F2F2;   
 }
 
@@ -22,6 +24,8 @@ html[data-theme='light'] {
     --highlighted:      #2e8b57;
     --highlighted-dark: #226644;
     --bg:               #e9e9e9;
+    --code:             #919191;
+    --card-content:     #aaaaaa ;
     --text:             #232323;             
     --text-contrast:    #2a2a2a;             
   }
@@ -30,7 +34,11 @@ html[data-theme='light'] {
 * {
     margin: 0;
     padding: 0;
-    font-family: "Poppins", sans-serif;;
+    font-family: "Poppins", sans-serif;
+}
+
+h1, h2, h3, p, a, ul{
+    color: var(--text);
 }
 
 i {
@@ -39,6 +47,12 @@ i {
 
 a{
     text-decoration: none !important;
+}
+
+iframe{
+    margin: 30px 50px 30px 20px;
+    border-radius: 20px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
 }
 
 /*=============================================BANNER=============================================*/
@@ -112,7 +126,7 @@ header {
 
 #btn-mobile {
     display: none;
-    color: var(--highlighted);
+    color: var(--highlighted) !important;
 }
 
 /*Lista*/
@@ -195,8 +209,8 @@ header {
 }
 
 #theme-toggle {
-    background: var(--highlighted);
-    color: var(--text-contrast);
+    background: var(--highlighted) !important;
+    color: var(--text-contrast) !important;
     border: none;
     padding: 0.3rem 0.7rem;
     border-radius: 50px;
@@ -268,7 +282,7 @@ section {
 }
 
 p code {
-    background: var(--second);
+    background: var(--code);
     padding: 3px;
     border-radius: 6px;
     color: var(--text);
@@ -569,7 +583,7 @@ footer {
 }
 
 .column-content {
-    background: var(--second);
+    background: var(--primary);
     padding: 2rem;
     border-radius: 20px;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
@@ -695,7 +709,7 @@ footer {
     min-width: 120px;
     font-weight: 500;
     background-color: var(--highlighted);
-    color: var(--text-contrast);
+    color: var(--text);
 }
 
 .controles-quiz button:hover {

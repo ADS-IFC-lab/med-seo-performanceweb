@@ -40,7 +40,7 @@
 }
 
 .card-content-catalog {
-    background: var(--fifth);
+    background: var(--card-content);
     height: 250px;
     display: flex;
     border-radius: 10px;

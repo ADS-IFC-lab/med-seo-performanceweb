@@ -1,22 +1,44 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
 :root {
-    --primary: #232323;
-    --second: #CCD0D9;
-    --third: gray;
-    --fourth: #666973;
-    --fifth: #F2F2F2;
-    --highlighted: #526c41;
+    --primary:          #232323;
+    --second:           #d8d8d8;
+    --third:            gray;
+    --fourth:           #6f6f6f;
+    --fifth:            #d3d3d3;
+    --highlighted:      #526c41;
     --highlighted-dark: #334229;
+    --bg:               #a6a6a6;
+    --text:             #232323;
+    --text-contrast:    #F2F2F2;   
 }
+
+html[data-theme='light'] {
+    --primary:          #c2c2c2;
+    --second:           #d7d7d7;
+    --third:            #696969;
+    --fourth:           #444;
+    --fifth:            #aaaaaa;
+    --highlighted:      #2e8b57;
+    --highlighted-dark: #226644;
+    --bg:               #e9e9e9;
+    --text:             #232323;             
+    --text-contrast:    #2a2a2a;             
+  }
 
 
 * {
     margin: 0;
     padding: 0;
-
+    font-family: "Poppins", sans-serif;;
 }
 
 i {
     font-size: large;
+}
+
+a{
+    text-decoration: none !important;
 }
 
 /*=============================================BANNER=============================================*/
@@ -52,13 +74,13 @@ header {
 }
 
 .aheader {
-    color: var(--second);
+    color: var(--text-contrast);
     text-decoration: none;
 }
 
 #container-header {
     font-size: 2em;
-    color: var(--second);
+    color: var(--text);
     display: flex;
     align-items: center;
     width: 100%;
@@ -68,7 +90,7 @@ header {
     width: 100%;
     text-align: center;
     text-decoration: none;
-    color: var(--second);
+    color: var(--text-contrast);
 }
 
 @media (max-width:820px) {
@@ -125,7 +147,7 @@ header {
     margin-left: 10px;
     margin-right: 10px;
     font-size: 0.8em;
-    color: var(--second);
+    color: var(--text-contrast);
 }
 
 #btn-mobile {
@@ -172,6 +194,22 @@ header {
     top: -12px;
 }
 
+#theme-toggle {
+    background: var(--highlighted);
+    color: var(--text-contrast);
+    border: none;
+    padding: 0.3rem 0.7rem;
+    border-radius: 50px;
+    cursor: pointer;
+    font-size: 1.2rem;
+    transition: 0.3s;
+    z-index: 1000;
+  }
+
+  #theme-toggle:hover {
+    background: var(--highlighted-dark);
+  }
+
 /*=============================================CONTEUDO=============================================*/
 
 body {
@@ -180,6 +218,7 @@ body {
     align-items: end;
     justify-content: end;
     overflow-x: hidden;
+    background: var(--bg) !important;
 }
 
 section {
@@ -232,7 +271,7 @@ p code {
     background: var(--second);
     padding: 3px;
     border-radius: 6px;
-    color: var(--primary);
+    color: var(--text);
 }
 
 .text-main-content h3 {
@@ -268,7 +307,9 @@ hr {
     }
 
     .catalog-container {
-        scale: 1;
+        transform: scale(1);
+        transform-origin: center center;
+        margin: 0;
     }
 
     .carousel-wrapper-catalog{
@@ -316,11 +357,16 @@ footer {
     position: absolute;
     display: flex;
     justify-content: space-around;
-    background-color: var(--second);
+    background-color: var(--primary);
     height: auto;
     width: 100%;
     left: 0;
     transition: .6s;
+    color: var(--text-contrast) !important;
+}
+
+.text-body-secondary{
+    color: var(--text-contrast) !important;
 }
 
 .my-5 {
@@ -328,6 +374,10 @@ footer {
 }
 
 #logo-footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
     width: calc(100vw * 0.3);
 }
 
@@ -358,7 +408,7 @@ footer {
 }
 
 .hero-text {
-    color: var(--second);
+    color: var(--text);
     text-align: center;
     font-size: 24px;
     font-weight: bold;
@@ -372,7 +422,7 @@ footer {
     justify-content: space-around;
     margin-left: 60px;
     background: var(--second);
-    color: var(--primary);
+    color: var(--text);
     padding: 40px;
     border-radius: 20px;
     text-align: center;
@@ -417,7 +467,7 @@ footer {
 }
 
 .practice-card h3 {
-    color: var(--primary);
+    color: var(--text);
     font-size: 20px;
     margin-bottom: 15px;
     display: flex;
@@ -426,7 +476,7 @@ footer {
 }
 
 .practice-card p {
-    color: var(--fourth);
+    color: var(--text);
     line-height: 1.6;
     font-size: 14px;
 }
@@ -440,7 +490,7 @@ footer {
     display: flex;
     align-items: center;
     justify-content: center;
-    color: var(--fifth);
+    color: var(--text);
     flex-shrink: 0;
 }
 
@@ -475,7 +525,7 @@ footer {
 }
 
 .tool-card h4 {
-    color: var(--primary);
+    color: var(--text);
     font-size: 18px;
     margin-bottom: 10px;
     display: flex;
@@ -484,7 +534,7 @@ footer {
 }
 
 .tool-card p {
-    color: #666;
+    color: var(--text);
     font-size: 14px;
     line-height: 1.6;
 }
@@ -498,7 +548,7 @@ footer {
     display: flex;
     align-items: center;
     justify-content: center;
-    color: var(--fifth);
+    color: var(--text);
     flex-shrink: 0;
 }
 
@@ -519,14 +569,14 @@ footer {
 }
 
 .column-content {
-    background: white;
+    background: var(--second);
     padding: 2rem;
     border-radius: 20px;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
 .column-content h3 {
-    color: #2c2c2c;
+    color: var(--text);
     margin-bottom: 1rem;
     font-size: 1.3rem;
 }
@@ -534,7 +584,7 @@ footer {
 .column-content p {
     text-align: justify;
     line-height: 1.7;
-    color: #555;
+    color: var(--text);
 }
 
 /*============================================= Quiz Avaliativo ====================================*/
@@ -553,13 +603,13 @@ footer {
 .titulo-secao {
     font-size: 24px;
     font-weight: 700;
-    color: var(--primary);
+    color: var(--text);
     margin-bottom: 10px;
 }
 
 .subtitulo-secao {
     font-size: 16px;
-    color: var(--fourth);
+    color: var(--text);
     margin-bottom: 30px;
 }
 
@@ -571,7 +621,7 @@ footer {
     font-size: 18px;
     font-weight: 500;
     margin-bottom: 25px;
-    color: var(--primary);
+    color: var(--text);
     line-height: 1.5;
 }
 
@@ -584,13 +634,14 @@ footer {
     cursor: pointer;
     transition: background-color 0.2s ease;
     font-size: 16px;
-    color: var(--primary);
+    color: var(--text);
     position: relative;
     padding-left: 45px;
 }
 
 .opcoes-resposta label:hover {
     background-color: var(--third);
+    color: var(--text-contrast);
 }
 
 .opcoes-resposta input[type="radio"] {
@@ -602,7 +653,7 @@ footer {
     width: 20px;
     height: 20px;
     appearance: none;
-    border: 2px solid var(--primary);
+    border: 2px solid var(--text);
     border-radius: 50%;
     outline: none;
     cursor: pointer;
@@ -613,6 +664,7 @@ footer {
     background-color: var(--highlighted);
     border-color: var(--highlighted);
 }
+
 
 .opcoes-resposta input[type="radio"]:checked::before {
     content: '';
@@ -643,7 +695,7 @@ footer {
     min-width: 120px;
     font-weight: 500;
     background-color: var(--highlighted);
-    color: var(--fifth);
+    color: var(--text-contrast);
 }
 
 .controles-quiz button:hover {
@@ -654,7 +706,7 @@ footer {
     margin-top: 30px;
     font-size: 1.4em;
     font-weight: bold;
-    color: var(--primary);
+    color: var(--text);
     text-align: center;
     display: none;
 }
@@ -673,7 +725,7 @@ footer {
     min-width: 120px;
     font-weight: 500;
     background-color: #e6a100;
-    color: var(--fifth);
+    color: var(--text-contrast);
 }
 
 .quiz-container {

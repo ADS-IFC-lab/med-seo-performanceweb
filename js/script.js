@@ -7,7 +7,7 @@ function toggleMenu() {
 
 btnMobile.addEventListener('click', toggleMenu);
 
-
+//============ QUIZ ===============
 const todasQuestoes = [
   {
     enunciado: "O que significa SEO?",

@@ -217,13 +217,32 @@ function proximaPergunta() {
     alert("Por favor, selecione uma resposta!");
     return;
   }
+  const alternativas = document.querySelectorAll('input[name="resposta"]');
+  const respostaCorreta = perguntasSelecionadas[perguntaAtual].correta;
 
-  if (respostaSelecionada.value === perguntasSelecionadas[perguntaAtual].correta) {
-    pontuacao++;
-  }
+  alternativas.forEach((input) => {
+    const label = input.parentElement;
+    if (input.value === respostaCorreta) {
+      label.style.backgroundColor = "#526c41"; // verde claro
+      label.style.border = "1px solid #334229";
+    } else if (input.checked) {
+      label.style.backgroundColor = "#99332E"; // vermelho claro
+      label.style.border = "1px solid #6E2521";
 
-  perguntaAtual++;
-  mostrarPergunta();
+      respostaSelecionada.style.borderColor = "#6E2521"
+      respostaSelecionada.style.backgroundColor = "#6E2521"
+    }
+    input.disabled = true;
+  });
+
+  setTimeout(() => {
+    if (respostaSelecionada.value === respostaCorreta) {
+      pontuacao++;
+    }
+
+    perguntaAtual++;
+    mostrarPergunta();
+  }, 2000);
 }
 
 function mostrarResultado() {

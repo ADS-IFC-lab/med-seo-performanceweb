@@ -358,6 +358,10 @@ hr {
     .carousel-wrapper-catalog{
         width: 80vw;
     }
+
+    .card-description-catalog{
+        scale: 0.7;
+    }
 }
 
 /*=============================================FOOTER=============================================*/

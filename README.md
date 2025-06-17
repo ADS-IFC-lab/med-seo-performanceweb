@@ -6,7 +6,8 @@ Este projeto é um Material de Educacional Digital (MED) desenvolvido para estud
 - Curso: Tecnologia em Análise e Desenvolvimento de Sistemas
 - Disciplina: Desenvolvimento Web - 3a. fase
 - Professor: Rafael Leonardo Vivian
-- Estudantes: Caio Dutra, Cauê Borga, Cesar Cordeiro, Ezequiel Krenz, Fernando Maia, Pedro Haupt, Samuel Krenz
+
+- Estudantes: Caio Dutra, Cauê Grazziotin Borga, Cesar Cordeiro, Ezequiel Krenz, Fernando Maia, Pedro Haupt, Samuel Krenz
 
 ## 🎯 Objetivo
 O objetivo deste MED é apresentar conteúdo sobre:

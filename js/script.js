@@ -223,11 +223,13 @@ function proximaPergunta() {
   alternativas.forEach((input) => {
     const label = input.parentElement;
     if (input.value === respostaCorreta) {
-      label.style.backgroundColor = "#526c41"; // verde claro
+      label.style.backgroundColor = "#526c41";
       label.style.border = "1px solid #334229";
+      label.style.color = "#F2F2F2"
     } else if (input.checked) {
-      label.style.backgroundColor = "#99332E"; // vermelho claro
+      label.style.backgroundColor = "#99332E";
       label.style.border = "1px solid #6E2521";
+      label.style.color = "#F2F2F2"
 
       respostaSelecionada.style.borderColor = "#6E2521"
       respostaSelecionada.style.backgroundColor = "#6E2521"
@@ -261,16 +263,38 @@ window.onload = iniciarQuiz;
 //=================== Dark Theme ======================
 
 const toggleBtn = document.getElementById('theme-toggle');
-    const html = document.documentElement;
+const html = document.documentElement;
 
-    const savedTheme = localStorage.getItem('theme') || 'dark';
-    html.setAttribute('data-theme', savedTheme);
-    toggleBtn.innerHTML = savedTheme === 'dark' ? '<i class="bi bi-brightness-high-fill"></i>' : '<i class="bi bi-moon-fill"></i>';
+const savedTheme = localStorage.getItem('theme') || 'dark';
+html.setAttribute('data-theme', savedTheme);
+toggleBtn.innerHTML = savedTheme === 'dark' ? '<i class="bi bi-brightness-high-fill"></i>' : '<i class="bi bi-moon-fill"></i>';
 
-    toggleBtn.addEventListener('click', () => {
-      const currentTheme = html.getAttribute('data-theme');
-      const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
-      html.setAttribute('data-theme', newTheme);
-      localStorage.setItem('theme', newTheme);
-      toggleBtn.innerHTML = newTheme === 'dark' ? '<i class="bi bi-brightness-high-fill"></i>' : '<i class="bi bi-moon-fill"></i>';
-    });
+toggleBtn.addEventListener('click', () => {
+  const currentTheme = html.getAttribute('data-theme');
+  const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+  html.setAttribute('data-theme', newTheme);
+  localStorage.setItem('theme', newTheme);
+  toggleBtn.innerHTML = newTheme === 'dark' ? '<i class="bi bi-brightness-high-fill"></i>' : '<i class="bi bi-moon-fill"></i>';
+});
+
+//=================== Change Image ======================
+
+  function ajustarImagem() {
+    const img1 = document.getElementById('img1-banner');
+    const img2 = document.getElementById('img2-banner');
+    const img3 = document.getElementById('img3-banner');
+    if (window.innerWidth < 1000) {
+      img1.src = '../src/imgBanner1_resized.webp';
+      img2.src = '../src/imgBanner2_resized.webp';
+      img3.src = '../src/imgBanner3_resized.webp';
+    } else {
+      img1.src = '../src/imgBanner1.webp';
+      img2.src = '../src/imgBanner2.webp';
+      img3.src = '../src/imgBanner3.webp';
+    }
+  }
+
+  // Executa ao carregar
+  window.addEventListener('load', ajustarImagem);
+  // Executa ao redimensionar
+  window.addEventListener('resize', ajustarImagem);

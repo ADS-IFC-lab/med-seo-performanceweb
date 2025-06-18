@@ -284,13 +284,13 @@ toggleBtn.addEventListener('click', () => {
     const img2 = document.getElementById('img2-banner');
     const img3 = document.getElementById('img3-banner');
     if (window.innerWidth < 1000) {
-      img1.src = '../src/imgBanner1_resized.webp';
-      img2.src = '../src/imgBanner2_resized.webp';
-      img3.src = '../src/imgBanner3_resized.webp';
+      img1.src = 'src/imgBanner1_resized.webp';
+      img2.src = 'src/imgBanner2_resized.webp';
+      img3.src = 'src/imgBanner3_resized.webp';
     } else {
-      img1.src = '../src/imgBanner1.webp';
-      img2.src = '../src/imgBanner2.webp';
-      img3.src = '../src/imgBanner3.webp';
+      img1.src = 'src/imgBanner1.webp';
+      img2.src = 'src/imgBanner2.webp';
+      img3.src = 'src/imgBanner3.webp';
     }
   }
 
